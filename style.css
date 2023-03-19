@@ -1,0 +1,170 @@
+@font-face {
+    font-family: voyage;
+    src: url(./Voyage-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: voyage;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: rgb(189, 211, 234);
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: 400px;
+    margin: 135px auto;
+    border-radius: 10px;
+    background: #fff;
+    padding: 30px 0;
+}
+
+.wrapper h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    height: 50px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.task-input #icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(17px, -50%);
+}
+
+.task-input input {
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding: 0 20px 0 45px;
+    outline: none;
+}
+
+.task-input input::placeholder {
+    color: rgb(196, 192, 192);
+}
+
+.controls,
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    padding: 18px 25px;
+    border-bottom: 1.5px solid rgb(167, 167, 167);
+}
+
+.filters span {
+    margin: 0 8px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.filters span:first-child {
+    margin-left: 0;
+}
+
+.filters span.active {
+    color: rgb(40, 69, 255);
+}
+
+.controls .clear-btn {
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 4px;
+    padding: 7px 13px;
+    background: rgb(50, 50, 255);
+}
+
+.task-box {
+    margin: 20px 25px;
+}
+
+.task-box .task {
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.task-box .task:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.task label {
+    display: flex;
+}
+
+
+.task label input {
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.task .settings {
+    cursor: pointer;
+    position: relative;
+}
+
+.settings .task-menu {
+    background: #ffffff;
+    box-shadow: 0 0 6px rgb(176, 176, 176);
+    position: absolute;
+    padding: 5px 0;
+    border-radius: 5px;
+    z-index: 5;
+    right: -5px;
+    bottom: -60px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    transform-origin: top right;
+}
+
+.settings .task-menu.show {
+    transform: scale(1);
+}
+
+.task-menu li {
+    height: 25px;
+    font-size: 16px;
+    padding: 17px 14px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+}
+
+.task-menu li:last-child {
+    margin-bottom: 0;
+}
+
+.task-menu li:hover {
+    background: #dfdede;
+}
+
+.task-menu li i {
+    padding-right: 8px;
+}
